@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #007BFF;
+      border-radius: 5px;
+      width: 200px;
+      margin: 10px auto;
+    }
+    a:hover {
+      background-color: #0056b3;
+    }
+    #qrcode {
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+  <p>Scan the QR code to select a link.</p>
+  <div id="qrcode"></div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  <script>
+    // URL for a selection page containing the links
+    const selectionPageUrl = "https://yourwebsite.com/selection.html"; // Replace with your URL
+
+    // Generate the QR Code
+    const qrCodeElement = document.getElementById("qrcode");
+    new QRCode(qrCodeElement, {
+      text: selectionPageUrl,
+      width: 200,
+      height: 200,
+    });
+  </script>
+</body>
+</html>
