@@ -64,25 +64,26 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script>
-    // Generate the QR code
-    const qrcode = new QRCode(document.getElementById("qrcode"), {
-      text: "Scan this QR code",
-      width: 150,
-      height: 150,
-    });
+ <script>
+  // Generate the QR code with a valid URL or text
+  const qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: "https://example.com", // Replace this with the URL or text you want
+    width: 150,
+    height: 150,
+  });
 
-    // Show popup on QR code click
-    document.getElementById("qrcode").addEventListener("click", () => {
-      document.getElementById("popup").style.display = "block";
-      document.getElementById("overlay").style.display = "block";
-    });
+  // Show popup on QR code click
+  document.getElementById("qrcode").addEventListener("click", () => {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  });
 
-    // Close popup
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-  </script>
+  // Close popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
